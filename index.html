@@ -1,9 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Area and Perimeter, with JavaScript" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="Ms Raffin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/png" sizes="180x190" href="./images/trapezoid.jpg">
+    <title>Area of a Trapezoid</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Area and Perimeter of a Triangle, with JS</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <img src="./images/trapezoid.jpg" width="75%" height="auto" />
+            </th>
+            <th>
+              <h2>Formulas</h2>
+              <h3>A = (Side A + Side B) / 2 * Height</h3>
+            </th>
+          </tr>
+        </table>
+
+        <form action="calculate()">
+          <!-- Height Input -->
+          <p>Height</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="number" id="height-of-triangle"/>
+          </div>
+          <p>Side A</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="number" id="side-a"/>
+          </div>
+          <p>Side B</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="number" id="side-b"/> 
+          </div>
+        </form>
+<!-- Calculate Button -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()"
+        >
+          Calculate
+        </button>
+
+        <br />
+        <!-- Display Results -->
+        <div id="answers">
+          <div id="area"></div>
+          <div id="perimeter"></div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
+
